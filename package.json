@@ -1,0 +1,58 @@
+{
+  "name": "swapchan-ai-sdk",
+  "version": "0.1.0",
+  "description": "Vercel AI SDK tools for SwapChan: best-price swap and bridge quotes across every DEX aggregator and bridge, server-verified unsigned transactions, and free chain readers. No API key.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "ai",
+    "ai-sdk",
+    "vercel",
+    "tools",
+    "swap",
+    "dex",
+    "aggregator",
+    "bridge",
+    "cross-chain",
+    "solana",
+    "evm",
+    "defi",
+    "agent"
+  ],
+  "author": "T Robert Savo",
+  "license": "MIT",
+  "homepage": "https://swapchan.com/agents",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TSavo/swapchan-ai-sdk.git"
+  },
+  "peerDependencies": {
+    "ai": ">=5",
+    "zod": ">=3.25"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "ai": "^7.0.151",
+    "typescript": "^7.0.2",
+    "vitest": "^4.1.12",
+    "zod": "^4.6.7"
+  }
+}
