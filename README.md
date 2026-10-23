@@ -7,14 +7,14 @@ npm i swapchan-ai-sdk ai zod
 ```
 
 ```ts
-import { generateText, stepCountIs } from "ai";
+import { generateText, isStepCount } from "ai";
 import { openai } from "@ai-sdk/openai";
 import { swapchanTools } from "swapchan-ai-sdk";
 
 const { text } = await generateText({
   model: openai("gpt-5"),
   tools: swapchanTools({ partner: "your-partner-id" }),
-  stopWhen: stepCountIs(5),
+  stopWhen: isStepCount(5),
   prompt: "What's the best price to swap 1 ETH on Base to USDC on Arbitrum?",
 });
 ```
